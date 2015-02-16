@@ -12,7 +12,7 @@ def humanReadable(num):
 filename = sys.argv[1]
 #test to make sure it's a real zip file
 if not zipfile.is_zipfile(filename):
-    print "Supplied file is not a .zip file!"
+    print "Supplied file is not a .zip file, or is not found!"
     exit()
 zipFile = zipfile.ZipFile(filename)
 for item in zipFile.infolist():

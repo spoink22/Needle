@@ -1,5 +1,9 @@
 import sys
-num = int(sys.argv[1])
+try:
+    num = int(sys.argv[1])
+except:
+    print "Nice try, but the argument you supplied isn't a number!"
+    exit()
 binary = bin(num)
 hexadecimal = hex(num)
 

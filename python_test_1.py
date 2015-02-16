@@ -1,6 +1,10 @@
 import sys
 filename = sys.argv[1]
-fin = open (filename,'r')
+try:
+	fin = open (filename,'r')
+except:
+	print "File not found!"
+	exit()
 #split up document into words, split by whitespace
 originalwords = fin.read().split()
 #go through each word, and make them follow the same convention

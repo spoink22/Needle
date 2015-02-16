@@ -10,7 +10,11 @@ def decoder (sentence):
     return str(score)
 
 filename = sys.argv[1]
-fin = open (filename,'r')
+try:
+    fin = open (filename,'r')
+except:
+    print "File not found!"
+    exit()
 #It says I can assume that the file given will follow standard English practices. I found when I split by a period and two spaces it would cut off the final
 #period of all but the last sentence of the document. As far as I know, there's no other reason to use two spaces together in English, so it should work to just split
 #by double spaces, but if that doesn't work, it's an error of my knowledge of English, not coding.
